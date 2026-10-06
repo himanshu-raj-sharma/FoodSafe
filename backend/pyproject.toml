@@ -1,0 +1,65 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "foodsafe-backend"
+version = "0.1.0"
+description = "Food Safety Operations & Intelligence Platform Backend"
+authors = ["Himanshu Raj <himanshu.raj@example.com>"]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+
+[project.dependencies]
+python = ">=3.11"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+SQLAlchemy = "^2.0.23"
+pytest = "^7.4.3"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+python-multipart = "^0.0.13"
+python-dotenv = "^1.0.0"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "mypy",
+    "flake8",
+]
+
+[tool.poetry]
+packages = [{include = "app"}]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

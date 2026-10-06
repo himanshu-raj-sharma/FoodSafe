@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.cover
+.hypothesis/
+.tox/
+.eggs/
+dist/
+build/
+eggs/
+.venv/
+env/
+venv/
+ENV/
+.virtualenv/
+coverage.xml
+*.coverage
+
+# Poetry
+.poetry.lock
+# poetry.toml is in root - but should still be gitignored?
+# Actually keep it visible for dependency management
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Docker
+.dockerinit
+
+# Data files
+*.db
+*.sqlite3
+*.sqlite
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
