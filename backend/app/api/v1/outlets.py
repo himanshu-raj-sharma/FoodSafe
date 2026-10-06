@@ -3,10 +3,10 @@
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..core.database import get_db_session
-from ..schemas.outlet import OutletCreate, OutletRead, OutletUpdate, OutletListItem
-from ..models import Outlet, Organization
-from ..core.exceptions import FoodsafeHTTPException
+from ...core.database import get_db_session
+from ...schemas.outlet import OutletCreate, OutletRead, OutletUpdate, OutletListItem
+from ...models import Outlet, Organization
+from ...core.exceptions import FoodsafeHTTPException
 
 router = APIRouter(prefix="/outlets", tags=["outlets"])
 

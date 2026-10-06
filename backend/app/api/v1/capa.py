@@ -3,10 +3,10 @@
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..core.database import get_db_session
-from ..schemas.capa import CAPACreate, CAPARead, CAPAUpdate
-from ..models import CorrectiveAction, Incident
-from ..core.exceptions import FoodsafeHTTPException
+from ...core.database import get_db_session
+from ...schemas.capa import CAPACreate, CAPARead, CAPAUpdate
+from ...models import CorrectiveAction, Incident
+from ...core.exceptions import FoodsafeHTTPException
 
 router = APIRouter(prefix="/capa", tags=["capa"])
 

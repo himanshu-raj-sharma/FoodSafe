@@ -3,9 +3,9 @@
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..core.database import get_db_session
-from ..schemas.risk import RiskResponse
-from ..services.risk_service import RiskService
+from ...core.database import get_db_session
+from ...schemas.risk import RiskResponse
+from ...services.risk_service import RiskService
 
 router = APIRouter(prefix="/analytics", tags=["analytics"])
 

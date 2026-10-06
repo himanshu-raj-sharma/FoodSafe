@@ -3,6 +3,7 @@
 
 from .organization import Organization
 from .outlet import Outlet
+from .organization_membership import OrganizationMembership
 from .user import User
 from .role import Role
 from .permission import Permission

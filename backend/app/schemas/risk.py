@@ -2,7 +2,7 @@
 # Owner: Himanshu Raj
 
 from pydantic import BaseModel, Field
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 
 class RiskResponse(BaseModel):
     organization_id: int

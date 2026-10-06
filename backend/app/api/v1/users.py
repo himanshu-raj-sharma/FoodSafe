@@ -3,10 +3,10 @@
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..core.database import get_db_session
-from ..schemas.user import UserCreate, UserRead, UserUpdate, UserResponse
-from ..models import User, Organization
-from ..core.exceptions import FoodsafeHTTPException
+from ...core.database import get_db_session
+from ...schemas.user import UserCreate, UserRead, UserUpdate, UserResponse
+from ...models import User, Organization
+from ...core.exceptions import FoodsafeHTTPException
 
 router = APIRouter(prefix="/users", tags=["users"])
 
@@ -44,7 +44,7 @@ async def create_user(
             error_code="organization_not_found",
         )
     # Create user
-    from ..core.security import hash_password
+    from ...core.security import hash_password
     user = User(
         username=user_data.username,
         email=user_data.email,

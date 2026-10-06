@@ -1,7 +1,7 @@
 # FoodSafe © 2026 Himanshu Raj. All rights reserved.
 # Owner: Himanshu Raj
 
-from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, Table
+from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, Table, Boolean, Index, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from typing import List, Optional
@@ -14,6 +14,7 @@ role_permissions = Table(
     Base.metadata,
     Column("role_id", Integer, ForeignKey("roles.id"), primary_key=True),
     Column("permission_id", Integer, ForeignKey("permissions.id"), primary_key=True),
+    extend_existing=True,
 )
 class Role(Base):
     __tablename__ = "roles"

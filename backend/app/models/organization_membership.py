@@ -1,7 +1,7 @@
 # FoodSafe © 2026 Himanshu Raj. All rights reserved.
 # Owner: Himanshu Raj
 
-from sqlalchemy import Column, Integer, DateTime, ForeignKey, String, Table
+from sqlalchemy import Column, Integer, DateTime, ForeignKey, String, Table, Index
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from typing import List, Optional
@@ -14,6 +14,7 @@ user_roles = Table(
     Base.metadata,
     Column("user_id", Integer, ForeignKey("users.id"), primary_key=True),
     Column("role_id", Integer, ForeignKey("roles.id"), primary_key=True),
+    extend_existing=True,
 )
 class OrganizationMembership(Base):
     __tablename__ = "organization_memberships"

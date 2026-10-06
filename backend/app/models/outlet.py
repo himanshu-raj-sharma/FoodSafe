@@ -1,7 +1,7 @@
 # FoodSafe © 2026 Himanshu Raj. All rights reserved.
 # Owner: Himanshu Raj
 
-from sqlalchemy import Column, String, Integer, Text, DateTime, ForeignKey
+from sqlalchemy import Column, String, Integer, Text, DateTime, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from typing import List, Optional

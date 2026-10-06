@@ -3,8 +3,8 @@
 ## Author
 
 **Himanshu Raj**
-- Email: himanshu.raj@example.com
-- GitHub: @himanshu-raj (update with actual username)
+- Email: rajhimanshu5522@gmail.com
+- GitHub: @himanshu-raj-sharma
 - Role: Founder & Developer
 
 ## Copyright

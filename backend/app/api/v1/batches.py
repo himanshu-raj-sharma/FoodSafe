@@ -3,10 +3,10 @@
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..core.database import get_db_session
-from ..schemas.batch import BatchCreate, BatchRead, BatchUpdate
-from ..models import Batch, Supplier, Outlet
-from ..core.exceptions import FoodsafeHTTPException
+from ...core.database import get_db_session
+from ...schemas.batch import BatchCreate, BatchRead, BatchUpdate
+from ...models import Batch, Supplier, Outlet
+from ...core.exceptions import FoodsafeHTTPException
 
 router = APIRouter(prefix="/batches", tags=["batches"])
 
